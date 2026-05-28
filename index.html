@@ -3,24 +3,26 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Projects and notes from Sijia.">
-    <meta property="og:title" content="Sijia / Projects">
-    <meta property="og:description" content="Projects and notes from Sijia.">
+    <meta name="description" content="Bytebloom Lab is a personal site for projects, notes, and learning logs.">
+    <meta property="og:title" content="Bytebloom Lab / Projects and Notes">
+    <meta property="og:description" content="Bytebloom Lab is a personal site for projects, notes, and learning logs.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://naomi9810.github.io/til/">
-    <title>Sijia / Projects</title>
+    <title>Bytebloom Lab / Projects and Notes</title>
     <link rel="icon" href="assets/favicon.png">
     <link rel="stylesheet" href="assets/style.css">
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header">
-      <a class="brand" href="./" aria-label="Sijia home">
+      <a class="brand" href="./" aria-label="Bytebloom Lab home">
         <img src="assets/logo.svg" alt="">
-        <span>Sijia</span>
+        <span>Bytebloom Lab</span>
       </a>
       <nav aria-label="Primary">
+        <a href="#notes">Notes</a>
         <a href="#projects">Projects</a>
+        <a href="#topics">Topics</a>
         <a href="#about">About</a>
         <a href="https://github.com/Naomi9810">GitHub</a>
       </nav>
@@ -28,16 +30,54 @@
 
     <main id="content">
       <section class="intro" aria-labelledby="page-title">
-        <p class="kicker">Portfolio</p>
-        <h1 id="page-title">Projects</h1>
+        <p class="kicker">Personal site</p>
+        <h1 id="page-title">Bytebloom Lab</h1>
         <p>
-          Hi, I am Sijia. This is a simple project index for software,
-          geospatial work, learning notes, and experiments.
+          A small technical garden for projects, notes, learning logs, and
+          experiments. Some entries are polished portfolio work; some are
+          working notes that help ideas keep growing.
         </p>
       </section>
 
-      <section id="projects" class="project-list" aria-label="Projects">
-        <article class="project">
+      <section id="notes" class="content-section" aria-labelledby="notes-title">
+        <div class="section-heading">
+          <p class="kicker">Writing</p>
+          <h2 id="notes-title">Latest Notes</h2>
+        </div>
+        <div class="note-list">
+          <article class="note">
+            <h3>Building a lightweight project homepage</h3>
+            <p>
+              Notes on turning a forked TIL repository into a simpler static
+              site that can be edited directly and published with GitHub Pages.
+            </p>
+            <a href="#about">Read more</a>
+          </article>
+          <article class="note">
+            <h3>Using GitHub Pages without a build step</h3>
+            <p>
+              A reminder that small personal sites can stay fast and maintainable
+              with plain HTML, CSS, and a minimal publishing workflow.
+            </p>
+            <a href="#projects">Read more</a>
+          </article>
+          <article class="note">
+            <h3>Project notes worth keeping</h3>
+            <p>
+              Short observations from AI tooling, geospatial data work,
+              algorithms, and the small decisions behind public projects.
+            </p>
+            <a href="#topics">Read more</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="content-section" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="kicker">Selected work</p>
+          <h2 id="projects-title">Projects</h2>
+        </div>
+        <article class="entry">
           <div class="project-head">
             <h2>Campaign Atlas</h2>
             <time datetime="2025-06">June 2025</time>
@@ -57,7 +97,7 @@
           </a>
         </article>
 
-        <article class="project">
+        <article class="entry">
           <div class="project-head">
             <h2>LIDAR to DEMs and DSMs</h2>
             <time datetime="2017-11">November 2017</time>
@@ -77,7 +117,7 @@
           </a>
         </article>
 
-        <article class="project">
+        <article class="entry">
           <div class="project-head">
             <h2>Leetcode</h2>
             <time datetime="2021-10">October 2021</time>
@@ -96,7 +136,7 @@
           </a>
         </article>
 
-        <article class="project">
+        <article class="entry">
           <div class="project-head">
             <h2>10arrondissement</h2>
             <time datetime="2014-11">November 2014</time>
@@ -115,17 +155,37 @@
         </article>
       </section>
 
-      <section id="about" class="about" aria-labelledby="about-title">
-        <h2 id="about-title">About</h2>
+      <section id="topics" class="content-section" aria-labelledby="topics-title">
+        <div class="section-heading">
+          <p class="kicker">Index</p>
+          <h2 id="topics-title">Topics</h2>
+        </div>
+        <ul class="topic-list" aria-label="Topics">
+          <li><a href="#notes">AI tools</a></li>
+          <li><a href="#projects">Geospatial data</a></li>
+          <li><a href="#projects">Algorithms</a></li>
+          <li><a href="#notes">GitHub Pages</a></li>
+          <li><a href="#notes">Static sites</a></li>
+          <li><a href="#projects">JavaScript</a></li>
+        </ul>
+      </section>
+
+      <section id="about" class="content-section about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="kicker">About</p>
+          <h2 id="about-title">About the Lab</h2>
+        </div>
         <p>
-          This site is intentionally lightweight: a clean place for Sijia's
-          project links, public notes, and future portfolio updates.
+          Bytebloom Lab is a personal knowledge base and portfolio. It is
+          designed to stay easy to edit: project entries, note summaries, and
+          topic links live in plain HTML so the site can evolve without extra
+          tooling.
         </p>
       </section>
     </main>
 
     <footer>
-      <span>Copyright &copy; 2026 Sijia</span>
+      <span>Copyright &copy; 2026 Bytebloom Lab</span>
       <a href="https://github.com/Naomi9810">GitHub</a>
     </footer>
   </body>

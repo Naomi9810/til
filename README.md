@@ -1,6 +1,6 @@
-# Sijia Projects
+# Bytebloom Lab
 
-Static project homepage for Sijia, published with GitHub Pages.
+Static project and notes homepage, published with GitHub Pages.
 
 The site is intentionally lightweight: no Node build step, no generated content,
 and no copied starter posts. Everything needed to render the page is committed
@@ -10,7 +10,7 @@ directly in this repository.
 
 - `index.html` - main project page
 - `assets/style.css` - sky-blue visual theme and responsive layout
-- `assets/logo.svg` - small Sijia mark used in the header
+- `assets/logo.svg` - small Bytebloom Lab mark used in the header
 - `.github/workflows/publish.yml` - publishes the static files to GitHub Pages
 
 ## Local Preview
