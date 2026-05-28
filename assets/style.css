@@ -8,6 +8,8 @@
   --sky: #1ca8ff;
   --sky-strong: #0075c9;
   --sky-soft: #e5f5ff;
+  --mono: ui-monospace, "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 * {
@@ -20,10 +22,9 @@ html {
 
 body {
   background:
-    radial-gradient(circle at 16% 0%, #dff4ff 0, transparent 32rem),
-    linear-gradient(180deg, #f6fbff 0%, #ffffff 48%, #f7fbff 100%);
+    linear-gradient(180deg, #eef9ff 0%, #ffffff 22rem, #ffffff 100%);
   color: var(--ink);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--sans);
   line-height: 1.65;
   margin: 0;
 }
@@ -55,21 +56,23 @@ a:hover {
 main,
 footer {
   margin: 0 auto;
-  max-width: 860px;
-  width: min(100% - 2rem, 860px);
+  max-width: 820px;
+  width: min(100% - 2rem, 820px);
 }
 
 .site-header {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem 0;
+  padding: 1.35rem 0;
 }
 
 .brand {
   align-items: center;
   color: var(--ink);
   display: inline-flex;
+  font-family: var(--mono);
+  font-size: 0.95rem;
   font-weight: 750;
   gap: 0.55rem;
 }
@@ -83,12 +86,13 @@ footer {
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.95rem;
+  gap: 0.85rem;
 }
 
 nav a {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-family: var(--mono);
+  font-size: 0.86rem;
 }
 
 nav a:hover {
@@ -96,14 +100,15 @@ nav a:hover {
 }
 
 .intro {
-  padding: 4rem 0 2rem;
+  padding: 3.25rem 0 2.1rem;
 }
 
 .kicker {
   color: var(--sky-strong);
   font-size: 0.8rem;
   font-weight: 800;
-  letter-spacing: 0.14em;
+  font-family: var(--mono);
+  letter-spacing: 0.08em;
   margin: 0 0 0.75rem;
   text-transform: uppercase;
 }
@@ -115,21 +120,28 @@ p {
 }
 
 h1 {
-  font-size: clamp(3rem, 11vw, 5.8rem);
+  font-size: clamp(2.6rem, 8vw, 4.8rem);
   letter-spacing: 0;
-  line-height: 0.95;
-  margin-block-end: 1rem;
+  line-height: 1;
+  margin-block-end: 0.85rem;
 }
 
 .intro p {
   color: var(--muted);
-  font-size: 1.18rem;
-  max-width: 650px;
+  font-size: 1.04rem;
+  max-width: 680px;
+}
+
+.intro .subtitle {
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
 }
 
 .content-section {
   border-top: 1px solid var(--line);
-  padding: 2.25rem 0;
+  padding: 2rem 0;
 }
 
 .section-heading {
@@ -137,23 +149,27 @@ h1 {
 }
 
 .section-heading h2 {
-  font-size: clamp(1.9rem, 5vw, 3rem);
-  line-height: 1.05;
+  font-size: clamp(1.65rem, 4vw, 2.35rem);
+  line-height: 1.1;
   margin: 0;
 }
 
 .note-list {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  display: block;
 }
 
 .note {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  box-shadow: 0 18px 40px #0075c90f;
-  padding: 1.1rem;
+  border-bottom: 1px solid var(--line);
+  padding: 1.1rem 0;
+}
+
+.note:first-child {
+  padding-top: 0;
+}
+
+.note:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .note h3 {
@@ -169,6 +185,8 @@ h1 {
 }
 
 .note a {
+  font-family: var(--mono);
+  font-size: 0.88rem;
   font-weight: 750;
 }
 
@@ -198,6 +216,7 @@ h1 {
 time {
   color: var(--sky-strong);
   flex: 0 0 auto;
+  font-family: var(--mono);
   font-size: 0.95rem;
   font-weight: 650;
 }
@@ -223,6 +242,7 @@ time {
   border: 1px solid #b8e5ff;
   border-radius: 999px;
   color: #075f9d;
+  font-family: var(--mono);
   font-size: 0.82rem;
   font-weight: 700;
   padding: 0.28rem 0.62rem;
@@ -230,6 +250,8 @@ time {
 
 .project-link {
   color: var(--sky-strong);
+  font-family: var(--mono);
+  font-size: 0.9rem;
   font-weight: 750;
 }
 
@@ -251,6 +273,8 @@ time {
   border: 1px solid var(--line);
   border-radius: 999px;
   display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.88rem;
   font-weight: 750;
   padding: 0.45rem 0.75rem;
 }
@@ -265,6 +289,8 @@ footer {
   border-top: 1px solid var(--line);
   color: var(--muted);
   display: flex;
+  font-family: var(--mono);
+  font-size: 0.86rem;
   justify-content: space-between;
   padding: 1.5rem 0 2.5rem;
 }
