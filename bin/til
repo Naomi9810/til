@@ -1,8 +1,0 @@
-#!/usr/bin/env node
-
-import('../src/til.mjs')
-  .then(module => module.default(process.argv.slice(2)))
-  .catch(error => {
-    if (error) console.error(error)
-    process.exit(1)
-  })

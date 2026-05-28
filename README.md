@@ -1,42 +1,31 @@
-# things i've learned
+# Sijia Projects
 
-Brief blurbs on miscellaneous matter; everyday things I learn, things
-I know but often forget, and anything else I care to write down as I 
-[learn in public]. Not always definitive nor novel but hopefully helpful
-or at least interesting.
+Static project homepage for Sijia, published with GitHub Pages.
 
-[learn in public]: https://www.swyx.io/learn-in-public/
+The site is intentionally lightweight: no Node build step, no generated content,
+and no copied starter posts. Everything needed to render the page is committed
+directly in this repository.
 
----
+## Contents
 
-https://leebyron.com/til
+- `index.html` - main project page
+- `assets/style.css` - sky-blue visual theme and responsive layout
+- `assets/logo.svg` - small Sijia mark used in the header
+- `.github/workflows/publish.yml` - publishes the static files to GitHub Pages
 
----
+## Local Preview
 
-This repo is automatically maintained by a `til` script, found in `/bin/til`,
-symlinked into my `/.local/bin` directory. It relies on some local programs
-being available, such as `vim` and `fzf`.
+```sh
+python3 -m http.server 5173
+```
 
-Setting this up for your own system in its current state might not be so
-straightforward. If setting up your own til is interesting enough to you that
-you would be willing to help factor out reusable parts, open an issue to
-discuss.
+Then open:
 
+```text
+http://localhost:5173/
+```
 
-## Setup (only works on *nix)
+## Publish
 
-- Install [NodeJS](https://nodejs.org/en/download)
-- Install fzf
-  - Ubuntu: `sudo apt install fzf`
-- Modify the [Config File](./config.mjs) with your own info
-- In [GitHub pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), set it so you have the settings:
-  - Source: Deploy from a branch (Classic Pages experience)
-  - Branch: `gh-pages`, from the folder `/ (root)`
-
-
-## License
-
-Code found here is licensed under [MIT]. Content under [CC BY 4.0].
-
-[MIT]: ./LICENSE
-[CC BY 4.0]: https://creativecommons.org/licenses/by/4.0/
+Push changes to `main`. The GitHub Actions workflow publishes the repository
+root to the `gh-pages` branch.
